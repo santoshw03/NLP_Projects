@@ -1,0 +1,38 @@
+
+    Summary: Highly motivated and experienced data scientist with a strong background in machine learning, data analysis, and visualization. Proficient in programming languages such as Python, R, and SQL, with expertise in data visualization tools like Tableau and PowerBI. Proven track record of delivering high-impact projects that drive business results.
+
+Education:
+
+Bachelor’s/Master’s Degree in Computer Science, Statistics, or related field
+Technical Skills:
+
+Programming languages: Python, R, SQL
+Data visualization tools: Tableau, PowerBI
+Machine learning algorithms: scikit-learn, TensorFlow
+Data analysis tools: pandas, NumPy
+Operating Systems: Windows, Linux
+Cloud platforms: AWS, Google Cloud
+Work Experience:
+
+Senior Data Scientist, XYZ Corporation (2020-Present)
+Led a team of junior data scientists to develop and deploy machine learning models that improved customer retention by 25%
+Designed and implemented data visualization dashboards using Tableau to communicate insights to stakeholders
+Collaborated with cross-functional teams to develop data-driven solutions that drove business results
+Data Scientist, ABC Startups (2018-2020)
+Developed and deployed predictive models using scikit-learn and TensorFlow to improve sales forecasting by 15%
+Created data visualizations using PowerBI to communicate insights to stakeholders
+Worked with data engineers to design and implement data pipelines using AWS and Google Cloud
+Projects:
+
+Customer Retention Analysis: Developed a machine learning model using scikit-learn to predict customer churn and implemented a retention strategy that improved customer retention by 25%
+Sales Forecasting: Developed a predictive model using TensorFlow to improve sales forecasting by 15% and implemented a sales strategy that increased revenue by 10%
+Data Visualization Dashboard: Designed and implemented a data visualization dashboard using Tableau to communicate insights to stakeholders and improve business decision-making
+Achievements:
+
+Improved customer retention by 25% through data-driven insights and machine learning models
+Increased sales revenue by 10% through data-driven insights and predictive modeling
+Developed and deployed data visualization dashboards using Tableau to communicate insights to stakeholders
+Certifications:
+
+Certified Data Scientist (CDS)
+Certified Analytics Professional (CAP)
