@@ -65,7 +65,17 @@
         </form>
         <div class="col-3 card my-5 ms-2" style="border-radius: 8%">
           {% if message %}
-          <p class="text-danger">{{message}}</p>
+          <p class="text-danger m-2">{{message}}</p>
+          {% elif message2 %}
+          <p class="text-success m-2"><b>{{message2}}</b></p>
+          <ul>
+            {% for index in range(top_resumes|length) %}
+            <li class="" style="color: rgb(10, 75, 21)">
+              {{top_resumes[index]}} (similarity Score:
+              {{similarity_scores[index]}})
+            </li>
+            {% endfor %}
+          </ul>
           {% endif %}
         </div>
       </div>
