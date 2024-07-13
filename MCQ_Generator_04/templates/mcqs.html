@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      .correct-answer {
+        display: none;
+      }
+    </style>
+    <title>Generated MCQs</title>
+  </head>
+  <body>
+    <h1 class="mt-4 text-center">Generated MCQs:</h1>
+    <div class="container" id="mcqs-container">
+      {% for index, mcq in mcqs %}
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Question {{ index }}: {{ mcq[0] }} ?</h5>
+          <form>
+            {% set options = ['A', 'B', 'C', 'D'] %} {% set num_choices =
+            mcq[1]|length %} {% for choice_index in range(num_choices) %}
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="answer{{ index }}"
+                id="choice{{ index }}{{ choice_index }}"
+                value="{{ choice_index }}"
+              />
+              <label
+                class="form-check-label"
+                for="choice{{ index }}{{ choice_index }}"
+              >
+                {{ options[choice_index] }}: {{ mcq[1][choice_index] }}
+              </label>
+            </div>
+            {% endfor %}
+          </form>
+          <!-- Display the correct answer with a class -->
+          <small class="text-muted correct-answer"
+            >Correct Answer: {{ mcq[2] }}</small
+          >
+        </div>
+      </div>
+      {% endfor %}
+      <button id="show-results-btn" class="btn btn-primary">
+        Show Results
+      </button>
+    </div>
+
+    <script>
+      document
+        .getElementById("show-results-btn")
+        .addEventListener("click", function () {
+          // Get all elements with the 'correct-answer' class
+          var correctAnswers =
+            document.getElementsByClassName("correct-answer");
+          var correctCount = 0;
+          // Loop through each element and display it
+          for (var i = 0; i < correctAnswers.length; i++) {
+            correctAnswers[i].style.display = "block";
+          }
+          // Hide the button after showing results
+          this.style.display = "none";
+        });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
