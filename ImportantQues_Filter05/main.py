@@ -113,7 +113,6 @@ def matcher():
                     text += file.read().decode('utf-8')
 
         matching_ques = findmatching(question_description,text)
-
         return render_template('index.html',matching_ques = matching_ques)
     
     return render_template('index.html.html')
