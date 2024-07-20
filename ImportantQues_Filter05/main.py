@@ -1,4 +1,3 @@
-
 from flask import Flask, request, render_template
 from PyPDF2 import PdfReader
 import numpy as np
@@ -8,13 +7,13 @@ import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 nlp = spacy.load('en_core_web_sm')
 nltk.download('stopwords')
 
 def preprocessing(text):
-    text = re.sub(r'\[\d+\]|\d+\]|[a-z]*\]|Q[0-9]*\)|Time :|\[Max.|\d{2}/\d{2}/\d{4}|Q.\d|OR', '', text)
+    text = re.sub(r'\[\d+\]|\d+\]|[a-z]\]|Q[0-9]\)|Time :|\[Max.|\d{2}/\d{2}/\d{4}|Q.\d|OR', '', text)
     text = re.sub(r'\s+', ' ', text)
     text = text.strip()
     return text
@@ -114,9 +113,10 @@ def matcher():
                     text += file.read().decode('utf-8')
 
         matching_ques = findmatching(question_description,text)
+
         return render_template('index.html',matching_ques = matching_ques)
     
     return render_template('index.html.html')
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     app.run(debug=True)
