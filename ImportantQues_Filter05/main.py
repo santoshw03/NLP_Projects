@@ -7,7 +7,7 @@ import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 nlp = spacy.load('en_core_web_sm')
 nltk.download('stopwords')
@@ -118,5 +118,5 @@ def matcher():
     
     return render_template('index.html.html')
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug=True)
