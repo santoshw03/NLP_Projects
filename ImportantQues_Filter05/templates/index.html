@@ -53,6 +53,7 @@
           </button>
         </form>
       </div>
+      <h2 class="text-center" style="color: rgba(118, 33, 135, 0.947)">OR</h2>
       <div class="row justify-content-center">
         <form
           class="col-6"
@@ -95,7 +96,11 @@
         </form>
       </div>
       {% if matching_ques %} {% for group in matching_ques %}
-      <div class="alert alert-success fade show" role="alert">
+      <div
+        class="alert fade show"
+        role="alert"
+        style="background-color: rgba(220, 198, 242, 0.833)"
+      >
         {% for question in group %}
         <p class="mb-1">{{ question }}</p>
         {% endfor %}

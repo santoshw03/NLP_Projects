@@ -30,7 +30,11 @@
     </p>
     <div class="container" id="mcqs-container">
       {% for group in questions %}
-      <div class="alert alert-primary alert-dismissible fade show" role="alert">
+      <div
+        class="alert alert-dismissible fade show"
+        role="alert"
+        style="background-color: rgba(220, 198, 242, 0.833)"
+      >
         {% for question in group %}
         <p class="mb-1">{{ question }}</p>
         {% endfor %}
